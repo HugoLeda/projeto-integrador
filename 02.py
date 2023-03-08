@@ -1,10 +1,18 @@
-# Ler uma medida em polegadas e imprimir a equivalente em centímetros, sabendo que 2.54 cm equivale a 1 polegada.
+# 2.     Leia um vetor de 6 valores reais e exiba a média, o maior e o menor valor. 
 
-def polegadaParaCm(medida):
-    cm = medida / 2.54
-    return cm
+import random
 
-print("Converter polegada para centimetro\n") 
+vetor = [] 
+soma = 0
+maior = 0
+menor = 0
 
-medida = float(input("Digite a medida em polegada: "))
-print(f"{medida} em centimetros é igual a: {polegadaParaCm(medida)}")
+for i in range(6):  
+  vetor.append(random.random() * random.randint(0, 100))
+  if (vetor[i] <= vetor[menor]):
+    menor = i
+  elif (vetor[i] >= vetor[maior]):
+    maior = i
+  
+print(f"Vetor completo: {vetor}")
+print(f"Menor: {vetor[menor]}\nMaior: {vetor[maior]}\nMédia: {sum(vetor) / 6}")

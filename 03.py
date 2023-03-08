@@ -1,12 +1,18 @@
-# O custo de um carro novo ao consumidor é a soma do custo de fábrica com a porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja de 28% e os impostos de 45%, escrever um algoritmo para ler o custo de fábrica de um carro, calcular e escrever o custo final ao consumidor.
+# 3.     Leia um vetor de 12 posições e em seguida ler também dois valores X e Y quaisquer correspondentes a duas posições no vetor. Ao final seu programa deverá escrever a soma dos valores encontrados nas respectivas posições X e Y. 
 
-def custoFinal(valorFabrica, pctDistribuidor=28, impostos=45):
-    distribuidor = valorFabrica + ((valorFabrica * pctDistribuidor) / 100)
-    valorImpostos = valorFabrica + ((valorFabrica * impostos) / 100)
-    valorFinal = valorFabrica + distribuidor + valorImpostos
-    return valorFinal
+import random
 
-print("Calcular valor final do carro\n")
-valorFabrica = float(input("Digite o custo de fábrica do carro: "))
-print(f"Custo final ao consumidor: R$ {round(custoFinal(valorFabrica), 2)}")
-    
+vetor = [] 
+
+for i in range(12):  
+  vetor.append(random.randint(0, 900))
+  
+print(f"Vetor completo: {vetor}") 
+x = int(input("Digite uma posição do vetor para x: "))
+y = int(input("Digite uma posição do vetor para y: "))
+
+if (x < 0 or x > 11 or y < 0 or y > 11):
+  print("Posição não encontrada no vetor!")
+else:
+  soma = vetor[x] + vetor[y]
+  print(f"Soma das duas posições: {soma}")

@@ -1,15 +1,15 @@
-# Fazer um algoritmo que leia um número inteiro e escreva o seu antecessor e o seu sucessor
+# Leia um vetor de 10 valores inteiros e exiba todos os valores ímpares. 
+import random
 
-i = 0
-while (i != 1):
-    def printAntecessorSucessor(numero):
-        antecessor = numero - 1
-        sucessor = numero + 1    
-        print(f"O antecessor é: {antecessor}\nO sucessor é: {sucessor}")
-        
-    print("Mostar antecessor e sucessor\n")
-    numero = int(input("Digite um número: "))
+vetor = [] 
 
-    printAntecessorSucessor(numero)    
+for i in range(10):  
+  vetor.append(random.randint(0, 900))
 
-    i = int(input("Digite 1 para sair: "))
+vetorImpares = []
+for i in vetor:
+  if ((i % 2) != 0):
+    vetorImpares.append(i)
+    
+print(f"Todos os valors: {vetor}")    
+print(f"Valores impares: {vetorImpares}")
